@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal X-Omega | Intergalactic Spaceport</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Step 3: The Header Area -->
+    <header>
+        <div class="warp-overlay">
+            
+        </div>
+        <div class="header-content">
+            <h1>TERMINAL X-OMEGA</h1>
+            <p>GATEWAY TO THE OUTER RIM SECTOR</p>
+        </div>
+        <div class="status-bar">
+            <span>SYSTEM: ONLINE</span>
+            <span class="blink">TRAFFIC: HEAVY</span>
+            <span>TEMP: -270°C</span>
+        </div>
+    </header>
+    <!-- Step 4: Main Layout & Destinations -->
+    <main>
+        <section id="destinations">
+            <h2>POPULAR FLIGHT PATHS</h2>
+            <div class="grid-wrapper">
+                <article>
+                    <figure>
+                        <img src="assets/dest_kepler.jpeg" alt="Kepler-186f">
+                        <figcaption>
+                            <h3>Kepler-186f</h3>
+                            <p>Short description here.</p>
+                        </figcaption>
+                    </figure>
+                    <div class="card-details">
+                        <span>Class: Habitable</span>
+                        <button>BOOK PASSAGE</button>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="assets/dest_titan.jpeg" alt="Titan Station">
+                        <figcaption>
+                            <h3>Titan Station</h3>
+                            <p>Short description here.</p>
+                        </figcaption>
+                    </figure>
+                    <div class="card-details">
+                        <span>Class: Industrial</span>
+                        <button>BOOK PASSAGE</button>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="assets/dest_nebula.jpeg" alt="Nebula Resort">
+                        <figcaption>
+                            <h3>Nebula Resort</h3>
+                            <p>Short description here.</p>
+                        </figcaption>
+                    </figure>
+                    <div class="card-details">
+                        <span>Class: Luxury</span>
+                        <button>BOOK PASSAGE</button>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="assets/dest_blackhole.jpeg" alt="Event Horizon">
+                        <figcaption>
+                            <h3>Event Horizon</h3>
+                            <p>Short description here.</p>
+                        </figcaption>
+                    </figure>
+                    <div class="card-details">
+                        <span>Class: Extreme</span>
+                        <button>BOOK PASSAGE</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- Step 5: The Departure Board -->
+         <section id="schedule">
+            <div class="hologram-overlay">
+                <h2>LIVE DEPARTURE BOARD</h2>
+                <table>
+                    <caption>REAL-TIME WARP GATE STATUS</caption>
+                    <thead>
+                        <tr>
+                            <th>Flight</th>
+                            <th>Destination</th>
+                            <th>Gate</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XO-87</td>
+                            <td>PROXIMA CENTAURI</td>
+                            <td>A-12</td>
+                            <td>07:00</td>
+                            <td class="status-go">Boarding</td>
+                        </tr>
+                        <tr>
+                            <td>TR-103</td>
+                            <td>TITAN STATION</td>
+                            <td>B-07</td>
+                            <td>07:45</td>
+                            <td class="status-wait">Fueling</td>
+                        </tr>
+                        <tr>
+                            <td>GL-77</td>
+                            <td>ANDROMEDA</td>
+                            <td>X-04</td>
+                            <td>08:15</td>
+                            <td class="status-delay">Delayed</td>
+                        </tr>
+                        <tr>
+                            <td>KP-13</td>
+                            <td>KEPLER-186F</td>
+                            <td>C-07</td>
+                            <td>09:00</td>
+                            <td class="status-go">On Time</td>
+                        </tr>
+                        <tr>
+                            <td>VOID-0</td>
+                            <td>UNKNOWN</td>
+                            <td>???</td>
+                            <td>--:--</td>
+                            <td class="status-stop">Cancelled</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">SCANNING FOR INCOMING VESSELS...</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+         </section>
+         <!-- Step 6: The Booking Interface -->
+          <section id="Booking">
+            <div class="kiosk-interface">
+                <h2>SELF-SERVICE TERMINAL</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>IDENTITY VERIFICATION</legend>
+                        <label for="full-designation">Full Designation</label>
+                        <input type="text" id="full-designation" name="full_designation" required>
+                        <label for="id-code">ID Code</label>
+                        <input type="text" id="id-code" name="id_code" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>FLIGHT PARAMETERS</legend>
+                        <label for="destination">Destination</label>
+                        <input type="text" name="destination" id="destination" list="planets">
+                        <detalist id="planets">
+                            <option value="PROXIMA CENTAURI">PROXIMA CENTAURI</option>
+                            <option value="TITAN STATION">TITAN STATION</option>
+                            <option value="ANDROMEDA">ANDROMEDA</option>
+                            <option value="KEPLER-186F">KEPLER-186F</option>
+                        </detalist>
+                        <label for="cabin-class">Cabin Class</label>
+                        <select name="cabin_class" id="cabin-class" required>
+                            <option value="economy">Economy (Stasis Pod)</option>
+                            <option value="business">Business (Quarters)</option>
+                            <option value="first">First (Zero-G Suite)</option>
+                        </select>
+                        <button type="submit">AUTHORIZE CREDIT TRANSFER</button>
+                    </fieldset>
+                </form>
+            </div>
+          </section>
+    </main>
+    <!-- Step 7: The Footer -->
+     <footer>
+        <p>TERMINAL X-OMEGA // OPERATED BY GALACTIC FEDERATION // SAFETY NOT GUARANTEED</p>
+     </footer>
+</body>
+
+</html>
